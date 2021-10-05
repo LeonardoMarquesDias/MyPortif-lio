@@ -14,7 +14,7 @@ export default function Header() {
           <a href="https://github.com/LeonardoMarquesDias">
             <button>
               <FaGithub color="#eba417" />
-              Leonardo Dias
+                Leonardo Dias
             </button>
           </a>
         </div>
@@ -22,5 +22,3 @@ export default function Header() {
     </Container>
   );
 }
-
-
