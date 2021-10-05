@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   header { 
     height: 5rem;
-    border-bottom: 1px solid var(--gray-800);
+    border-bottom: 1px solid ${props => props.theme.gray800};
 
     .headerContent {
       max-width: 1120px;
@@ -14,6 +14,7 @@ export const Container = styled.div`
       display: flex;
       align-items: center;
 
+      //Home | Repositories
       nav {
         height: 5rem;
 
@@ -23,7 +24,7 @@ export const Container = styled.div`
           padding: 0 0.5rem;
           height: 5rem;
           line-height: 5rem;
-          color: var(--gray-300);
+          color: ${props => props.theme.gray300};
 
           transition: color 0.2s;
 
@@ -32,11 +33,11 @@ export const Container = styled.div`
           }
 
           &:hover {
-            color: var(--white);
+            color: ${props => props.theme.text};
           }
 
           &.active {
-            color: var(--white);
+            color: ${props => props.theme.text};
             font-weight: bold;
           }
 
@@ -48,18 +49,19 @@ export const Container = styled.div`
             position: absolute;
             bottom: 1px;
             left: 0;
-            background: var(--yellow);
+            background: ${props => props.theme.gold};
           }
         }
       }
       
+      //GithubButton
       a {
         margin-left: auto;
         
           button {
           height: 3rem;
           border-radius: 3rem;
-          background: var(--gray-850);
+          color: ${props => props.theme.text};
           border: 0;
           padding: 0 1.5rem;
 
@@ -67,7 +69,7 @@ export const Container = styled.div`
           align-items: center;
           justify-content: center;
 
-          color: var(--white);
+          background: ${props => props.theme.gray850};         
           font-weight: normal;
 
           svg {

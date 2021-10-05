@@ -1,7 +1,7 @@
 import { FaGithub } from 'react-icons/fa';
 import { Container } from './styles';
 
-export function Header() {
+export default function Header() {
   return (
     <Container>
       <header>
@@ -21,6 +21,6 @@ export function Header() {
       </header>
     </Container>
   );
-};
+}
 
-export default Header;
+
