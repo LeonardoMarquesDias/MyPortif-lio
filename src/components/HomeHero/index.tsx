@@ -1,5 +1,4 @@
 import Image from 'next/image'
-
 import { Container, TextContainer, InfosContainer, CodeItem } from './styles';
 import picture from '../../assets/pessoa.webp';
 

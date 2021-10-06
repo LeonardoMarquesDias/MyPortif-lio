@@ -52,7 +52,7 @@ export const TextContainer = styled.section`
   h2 {
     font-size: 3rem;
     font-weight: 400;
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.gold};
   }
 
   @media (max-width: 1450px) {
@@ -125,11 +125,5 @@ export const CodeItem = styled.pre`
 
   span.blue {
     color: #7ac7e3;
-  }
-  
-  span.comment {
-    color: ${({ theme }) => theme.text};
-    margin-bottom: 1rem;
-    display: block;
   }
 `;
