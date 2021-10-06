@@ -10,7 +10,9 @@ const theme = {
 
   green: '#04d361',
   gold: '#eba417',
-  purple: '#8257E6'
+  purple: '#8257E6',
+
+  gradient: 'linear-gradient(225deg, #29292e 0%, #121214 100%);'
 };
 
 export default theme;
