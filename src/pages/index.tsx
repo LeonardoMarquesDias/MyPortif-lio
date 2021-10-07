@@ -7,6 +7,7 @@ import Experiences from '../components/Experiences'
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import Repositories from '../components/Repositories';
 
 export default function Home() {
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function Home() {
       <main className="container">
         <HomeHero />
         <Experiences />
+        <Repositories />
       </main>
     </HomeContainer>
   );

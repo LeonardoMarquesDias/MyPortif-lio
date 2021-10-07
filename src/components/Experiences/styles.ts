@@ -9,7 +9,7 @@ export const Container = styled.section`
     display: flex;
     gap: 1.5rem;
     padding-bottom: 8rem;
-    border-bottom: 3px solid ${({ theme }) => theme.text};
+    border-bottom: 3px solid ${props => props.theme.gray800};
     
     @media (max-width: 1000px) {
       gap: 1rem;
@@ -41,9 +41,10 @@ export const ItemContainer = styled.div`
     h1 {
       color: ${({ theme }) => theme.purple};
       font-size: 2rem;
+      margin-bottom: 0.3rem;
     }
 
-    >p {
+    > p {
       margin-bottom: 1.5rem;
     }
 
@@ -61,11 +62,11 @@ export const ItemContainer = styled.div`
     }
 
     span {
-      margin-top: 2rem;
       font-family: 'Dancing Script', cursive;
       color: ${props => props.theme.gray700};
       font-size: 1.5rem;
       font-weight: 300;
+      margin-top: 1rem;
     }
   }
 
@@ -80,12 +81,10 @@ export const ItemContainer = styled.div`
 
   @media (max-width: 1000px) {
     > div {
-      height: 15rem;
-      padding-top: 1.5rem;
+      height: auto;
 
       h1 {
         font-size: 1.2rem;
-        margin-bottom: 1rem;
       }
 
       h2 {
@@ -94,6 +93,10 @@ export const ItemContainer = styled.div`
 
       p {
         font-size: 0.9rem;
+      }
+
+      span {
+        font-size: 1.3rem;
       }
     }
   }
@@ -108,7 +111,6 @@ export const ItemContainer = styled.div`
     }
 
     > div {
-      height: auto;
       padding: 2rem;
       max-width: 100%;
 

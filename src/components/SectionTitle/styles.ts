@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: flex-start;
   gap: 0.5rem;
 
-  h1 {
+  > h1 {
     color: ${({ theme }) => theme.text};
     font-size: 4.5rem;
   }

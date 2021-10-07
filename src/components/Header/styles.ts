@@ -23,7 +23,7 @@ export const Container = styled.header`
         height: 5rem;
         line-height: 5rem;
         color: ${props => props.theme.gray300};
-        transition: color 0.2s;
+        transition: color 0.3s;
 
         & + a { 
           margin-left: 2rem;

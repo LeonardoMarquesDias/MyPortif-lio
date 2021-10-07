@@ -1,8 +1,6 @@
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 
-import Header from '../components/Header';
-
 import theme from '../styles/theme';
 import GlobalStyles from '../styles/globals';
 
