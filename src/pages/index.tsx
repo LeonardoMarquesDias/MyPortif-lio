@@ -4,6 +4,7 @@ import { HomeContainer } from '../styles/homeStyles';
 import Header from "../components/Header";
 import HomeHero from '../components/HomeHero';
 import Experiences from '../components/Experiences'
+import MyStack from '../components/MyStack';
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -22,6 +23,7 @@ export default function Home() {
         <HomeHero />
         <Experiences />
         <Repositories />
+        <MyStack />
       </main>
     </HomeContainer>
   );
