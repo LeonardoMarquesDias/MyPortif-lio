@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
   height: 5rem;
-  border-bottom: 1px solid ${props => props.theme.gray800};
+  border-bottom: 1px solid ${props => props.theme.border};
 
   .headerContent {
     max-width: 1120px;
@@ -11,6 +11,7 @@ export const Container = styled.header`
     padding: 0 2rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     //Home | Repositories
     nav {
@@ -64,7 +65,7 @@ export const Container = styled.header`
         display: flex;
         align-items: center;
         justify-content: center;
-        background: ${props => props.theme.gray850};         
+        background: ${props => props.theme.border};         
         font-weight: normal;
 
         svg {

@@ -9,7 +9,7 @@ export const Container = styled.section`
     display: flex;
     gap: 1.5rem;
     padding-bottom: 8rem;
-    border-bottom: 3px solid ${props => props.theme.gray800};
+    border-bottom: 3px solid ${props => props.theme.border};
     
     @media (max-width: 1000px) {
       gap: 1rem;

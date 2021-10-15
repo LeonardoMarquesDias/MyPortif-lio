@@ -5,10 +5,13 @@ import Header from "../components/Header";
 import HomeHero from '../components/HomeHero';
 import Experiences from '../components/Experiences'
 import MyStack from '../components/MyStack';
+import FormContact from '../components/FormContact';
+import Footer from '../components/Footer';
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Repositories from '../components/Repositories';
+
 
 export default function Home() {
   useEffect(() => {
@@ -24,7 +27,10 @@ export default function Home() {
         <Experiences />
         <Repositories />
         <MyStack />
+        <FormContact />
       </main>
+
+      <Footer />
     </HomeContainer>
   );
 }

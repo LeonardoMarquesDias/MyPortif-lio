@@ -2,6 +2,10 @@ import { FaGithub } from 'react-icons/fa';
 import { Container } from './styles';
 
 export default function Header() {
+  function handleRedirect(url: string) {
+    window.open(url);
+  }
+
   return (
     <Container>
       <header>
@@ -11,7 +15,7 @@ export default function Header() {
             <a>Repositories</a>
           </nav>
 
-          <a href="https://github.com/LeonardoMarquesDias">
+          <a onClick={() => handleRedirect('https://github.com/LeonardoMarquesDias')}>
             <button>
               <FaGithub color="#eba417" />
                 Leonardo Dias

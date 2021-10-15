@@ -24,19 +24,20 @@ export const Container = styled.section`
   }
 
   > button {
-    background: ${({ theme }) => theme.gray850};
+    background: ${({ theme }) => theme.gradient};
+    border: 2px solid ${({ theme }) => theme.border};
     padding: 0.8rem 3rem;
     border-radius: 0.5rem;
     border: none;
-    transition: 0.5s;
+    transition: 1s;
 
     &:hover {
-      background: ${({ theme }) => darken(0.05, theme.gray800)};
+      background: ${({ theme }) => theme.gray700}; 
     }
 
     a {
       text-transform: uppercase;
-      color: ${({ theme }) => theme.gold};
+      color: ${({ theme }) => theme.gold};  
       font-size: 1.5rem;
       font-weight: 300;
     }
