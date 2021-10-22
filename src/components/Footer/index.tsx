@@ -22,7 +22,7 @@ function Footer() {
     <Container>
       <div className="container">
         <button type="button" onClick={handleScrollTop}>
-          Top page 
+          Top page.
         </button>
         <section>
           <AiFillYoutube 
