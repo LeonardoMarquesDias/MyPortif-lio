@@ -1,5 +1,6 @@
+import NavLink from './NavLink';
 import { FaGithub } from 'react-icons/fa';
-import { Container } from './styles';
+import { HederContent } from './styles'
 
 export default function Header() {
   function handleRedirect(url: string) {
@@ -7,22 +8,26 @@ export default function Header() {
   }
 
   return (
-    <Container>
-      <header>
-        <div className="headerContent">
-          <nav>
-            <a className="active">Home</a>
-            <a>Repositories</a>
-          </nav>
-
-          <a onClick={() => handleRedirect('https://github.com/LeonardoMarquesDias')}>
-            <button>
-              <FaGithub color="#eba417" />
-                Leonardo Dias
-            </button>
-          </a>
+    <div className="container">
+      <HederContent>
+        <div>
+          <h3>Portfolio</h3>
         </div>
-      </header>
-    </Container>
+
+        <div>
+          <ul>
+            <NavLink title="Home" path="/" />
+            <NavLink title="Projects" path="/globalProjects" includes />
+          </ul>
+        </div>
+        
+        <div>     
+          <button onClick={() => handleRedirect('https://github.com/LeonardoMarquesDias')}>
+            <FaGithub color="#eba417" />
+              Leonardo Dias
+          </button>
+        </div>
+      </HederContent>
+    </div>
   );
 }
