@@ -15,7 +15,7 @@ export const Container = styled.div<ContainerProps>`
     align-items: flex-end;
     justify-content: flex-start;
     border-radius: 0.5rem;
-    border: 2px solid ${({ theme }) => theme.gold};
+    border: 2px solid ${({ theme }) => theme.gray300};
     transition: 0.5s;
     overflow: hidden;
 
@@ -43,13 +43,10 @@ export const Container = styled.div<ContainerProps>`
 
     > div.overlay {
       position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      padding: 1rem;
+      width: 100%; 
       background-color: ${({ theme }) => theme.gradiente};
       opacity: 0.7;
-      transition: 0.5s;
+      transition: 0.5s;  
     }
   }
 `;
