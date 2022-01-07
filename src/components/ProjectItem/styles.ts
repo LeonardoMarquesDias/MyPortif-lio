@@ -5,48 +5,53 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
-  > a {
+  a {
     position: relative;
     width: 100%;
     background: url(${props => props.imgUrl}) no-repeat center;
     height: 10rem;
-    padding: 1.5rem;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
     border-radius: 0.5rem;
-    border: 2px solid ${({ theme }) => theme.gray300};
-    transition: 0.5s;
+    border: 1px solid ${({ theme }) => theme.border};
+    transition: 1s;
     overflow: hidden;
 
     &:hover {
-      border: 2px solid ${({ theme }) => theme.gold};
+      border: 1px solid ${({ theme }) => theme.gold};
 
       > div.overlay {
         opacity: 0.5;
       }
     }
 
-    > section {
+    > div.overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: ${({ theme }) => theme.gradient};
+      opacity: 0.7;
+      transition: 0.5s; 
+      border-radius: 0.5rem;
+    }
+
+    section {
       z-index: 2;
-      
+      padding: 5.4rem 0rem 0rem 1.5rem;
+
       h1 {
         color: ${({ theme }) => theme.gold};
         font-size: 1.5rem;
       }
+
       h2 {
         color: ${({ theme }) => theme.gray700};
         font-weight: 300;
         font-size: 1rem;
-      }
+      }  
     }
 
-    > div.overlay {
-      position: absolute;
-      width: 100%; 
-      background-color: ${({ theme }) => theme.gradiente};
-      opacity: 0.7;
-      transition: 0.5s;  
-    }
+    
   }
 `;

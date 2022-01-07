@@ -10,7 +10,7 @@ interface ProjectItemProps {
 
 export default function ProjectItem({ title, type, imgUrl, slug }: ProjectItemProps ) {
   return (
-    <Container>
+    <Container imgUrl={imgUrl}>
       <Link href={`/projects/${slug}`}>
         <a>
           <div className="overlay">
