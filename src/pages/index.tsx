@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { HomeContainer } from '../styles/homeStyles';
+import { HomeContainer } from '../styles/HomeStyles';
 
 import Header from "../components/Header";
 import HomeHero from '../components/HomeHero';
