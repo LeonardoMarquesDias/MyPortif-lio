@@ -9,6 +9,7 @@ export const Container = styled.div<ContainerProps>`
     position: relative;
     width: 100%;
     background: url(${props => props.imgUrl}) no-repeat center;
+    background-size: cover;
     height: 10rem;
     display: flex;
     align-items: flex-end;
@@ -51,7 +52,5 @@ export const Container = styled.div<ContainerProps>`
         font-size: 1rem;
       }  
     }
-
-    
   }
 `;
