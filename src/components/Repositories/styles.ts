@@ -24,26 +24,25 @@ export const Container = styled.section`
   }
 
   > button {
-    background: ${({ theme }) => theme.gradient};
-    border: 2px solid ${({ theme }) => theme.border};
+    background: ${({ theme }) => theme.gold};
     padding: 0.8rem 3rem;
     border-radius: 0.5rem;
+    font-weight: normal;
     border: none;
-    transition: 1s;
+    transition: 0.5s;
 
     &:hover {
-      background: ${({ theme }) => theme.gray700}; 
+      background: ${({ theme }) => darken(0.25, theme.gold)};
     }
 
     a {
-      text-transform: uppercase;
-      color: ${({ theme }) => theme.gold};  
-      font-size: 1.5rem;
-      font-weight: 300;
+      text-transform: uppercase; 
+      font-size: 1.1rem;
+      color: ${({ theme }) => theme.gray700};
     }
 
     @media (max-width: 500px) {
-      padding: 1rem;
+      padding: 1.1rem;
 
       a {
         font-size: 1rem;

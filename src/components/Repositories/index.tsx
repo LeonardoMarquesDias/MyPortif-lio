@@ -31,7 +31,7 @@ function Repositories() {
       </section>
       <button>
         <Link href="/repositories">
-          <a>All repositories</a>
+          <a>Global Projects</a>
         </Link>
       </button>
     </Container>
