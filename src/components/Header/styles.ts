@@ -1,4 +1,3 @@
-import { lighten } from 'polished';
 import styled from 'styled-components';
 
 interface NavLinkProps {
@@ -35,7 +34,7 @@ export const HederContent = styled.header`
     height: 3rem;
     border-radius: 3rem;
     color: ${props => props.theme.text};
-    border: 0;
+    border: none;
     padding: 0 1.5rem;
     display: flex;
     align-items: center;
@@ -73,7 +72,7 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
   a {
     text-transform: uppercase;
     color: ${props =>
-      props.isActive ? props.theme.text : props.theme.gold};
+      props.isActive ? props.theme.gold : props.theme.gray700};
     transition: 0.5s;  
 
     &.isActive::after {
