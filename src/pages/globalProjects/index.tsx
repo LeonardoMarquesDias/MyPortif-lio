@@ -1,6 +1,6 @@
 import Header from '../../components/Header'
 import ProjectItem from '../../components/ProjectItem'
-import { GlobalProjectsContainer } from '../../styles/globalProjects.styles'
+import { GlobalProjectsContainer } from '../../styles/GlobalProjectsStyles'
 
 export default function GlobalProjects() {
   return (
