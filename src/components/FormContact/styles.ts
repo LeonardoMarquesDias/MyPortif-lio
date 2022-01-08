@@ -15,24 +15,20 @@ export const FormContainer = styled.form`
   > button {
     border: none;
     padding: 0.7rem 2rem;
-    color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.gray700};
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border-radius: 0.5rem;
-    background: ${({ theme }) => darken(0.25, theme.gold)};
+    background: ${({ theme }) => theme.gold};
     transition: 0.5s;
     width: fit-content;
-
-    &:hover {
-      color: ${({ theme }) => theme.text};
-    }
 
     &:disabled {
       opacity: 0.5;
     }
 
     &:not(:disabled):hover {
-      background: ${({ theme }) => theme.gold};
+      background: ${({ theme }) => darken(0.25, theme.gold)};
     }
   }
 
@@ -52,8 +48,8 @@ export const FormContainer = styled.form`
 export const Input = styled.input`
   height: 3rem;
   width: 100%;
-  background: ${({ theme }) => theme.gradient};
-  border: 1px solid ${({ theme }) => theme.border};
+  background: ${({ theme }) => theme.gray700};
+  border: 1px solid ${({ theme }) => theme.gray700};
   padding: 1.7rem 1.5rem;
   color: ${({ theme }) => theme.text};
   border-radius: 0.5rem;
@@ -62,7 +58,7 @@ export const Input = styled.input`
   transition: 0.5s;
 
   &:focus {
-    border-color: ${({ theme }) => theme.gray300};
+    border-color: ${({ theme }) => theme.gold};
   }
 
   &::placeholder {
@@ -78,7 +74,7 @@ export const Input = styled.input`
 export const TextArea = styled.textarea`
   height: 10rem;
   width: 100%;
-  background: ${({ theme }) => theme.gradient};
+  background: ${({ theme }) => theme.gray700};
   border: 1px solid ${({ theme }) => theme.border};
   padding: 1.7rem 1.5rem;
   color: ${({ theme }) => theme.text};
@@ -90,7 +86,7 @@ export const TextArea = styled.textarea`
   grid-column: 1 / 3;
 
   &:focus {
-    border-color: ${({ theme }) => theme.gray300};
+    border-color: ${({ theme }) => theme.gold};
   }
 
   &::placeholder {
