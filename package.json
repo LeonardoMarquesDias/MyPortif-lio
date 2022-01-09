@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prismicio/client": "5.1.1",
     "@types/styled-components": "^5.1.14",
+    "add": "^2.0.6",
     "aos": "^2.3.4",
     "axios": "^0.23.0",
     "from": "^0.1.7",
