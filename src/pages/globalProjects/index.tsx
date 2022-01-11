@@ -1,6 +1,7 @@
 import Prismic from '@prismicio/client';
 import { getPrismicClient } from '../../services/prismic';
 import { GetStaticProps } from 'next';
+import Head from 'next/head';
 
 import Header from '../../components/Header';
 import ProjectItem from '../../components/ProjectItem';
@@ -20,6 +21,21 @@ interface ProjectsProps {
 export default function GlobalProjects({ projects }: ProjectsProps) {
   return (
     <GlobalProjectsContainer>
+      <Head>
+        <title>Projects | Protfolio</title>
+        <meta
+          name="ReactJS Developer Portfolio"
+          content="Falta por uma descrição melhor aqui"
+        />
+        <meta property="og:image" content="/ogimage.png" />
+        <meta property="og:image:secure_url" content="/ogimage.png" />
+        <meta name="twitter:image" content="/ogimage.png" />
+        <meta name="twitter:image:src" content="/ogimage.png" />
+        <meta
+          property="og:ReactJS Developer Portfolio"
+          content="Falta por uma descrição melhor aqui"
+        />
+      </Head>
       <Header />
       <main className="container">
         {projects.map(project => (

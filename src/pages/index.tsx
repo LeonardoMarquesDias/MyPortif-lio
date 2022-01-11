@@ -1,9 +1,9 @@
 import Prismic from '@prismicio/client';
 import { getPrismicClient } from '../services/prismic';
 import { GetStaticProps } from 'next';
+import Head from 'next/head';
 
 import { useEffect } from 'react';
-import { HomeContainer } from '../styles/homeStyles';
 
 import Header from "../components/Header";
 import HomeHero from '../components/HomeHero';
@@ -12,9 +12,11 @@ import MyStack from '../components/MyStack';
 import FormContact from '../components/FormContact';
 import Footer from '../components/Footer';
 import Repositories from '../components/Repositories';
+import { HomeContainer } from '../styles/homeStyles';
 
 import 'aos/dist/aos.css';
 import Aos from 'aos';
+
 
 interface IProjeto {
   slug: string;
@@ -36,6 +38,22 @@ export default function Home({ projects }: HomeProps) {
 
   return (
     <HomeContainer>
+      <Head>
+        <title>Home | Protfolio</title>
+        <meta
+          name="ReactJS Developer Portfolio"
+          content="Falta por uma descrição melhor aqui"
+        />
+        <meta property="og:image" content="/ogimage.png" />
+        <meta property="og:image:secure_url" content="/ogimage.png" />
+        <meta name="twitter:image" content="/ogimage.png" />
+        <meta name="twitter:image:src" content="/ogimage.png" />
+        <meta
+          property="og:ReactJS Developer Portfolio"
+          content="Falta por uma descrição melhor aqui"
+        />
+      </Head>
+      
       <Header />
 
       <main className="container">

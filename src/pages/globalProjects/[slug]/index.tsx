@@ -1,6 +1,7 @@
 import Prismic from '@prismicio/client';
 import { getPrismicClient } from '../../../services/prismic';
 import { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
 
 import { useRouter } from 'next/router';
 
@@ -18,6 +19,7 @@ interface IProject {
   description: string;
   github: string;
   imgUrl: string;
+  thumbnail: string;
 }
 
 interface ProjectsProps {
@@ -36,6 +38,15 @@ export default function Project({ project }: ProjectsProps) {
 
   return (
     <ProjectContainer>
+      <Head>
+        <title>{project.title} | Protfolio</title>
+        <meta name="ReactJS Developer Portfolio" content={project.description} />
+        <meta property="og:image" content={project.thumbnail} />
+        <meta property="og:image:secure_url" content={project.thumbnail} />
+        <meta name="twitter:image" content={project.thumbnail} />
+        <meta name="twitter:image:src" content={project.thumbnail} />
+        <meta property="og:ReactJS Developer Portfolio" content={project.description} />
+      </Head>
       <Header />
       <BannerProject 
         title={project.title}
@@ -89,6 +100,7 @@ export const getStaticProps: GetStaticProps = async context => {
     type: response.data.type,
     description: response.data.description,
     github: response.data.github.url,
+    thumbnail: response.data.thumbnail.url
   };
 
   return {
