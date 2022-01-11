@@ -30,6 +30,7 @@ export const StackContainer = styled.div`
   align-items: center;
   justify-content: center;
 
+
   p {
     color: ${({ theme }) => theme.gold};
     font-weight: 300;

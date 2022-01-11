@@ -11,7 +11,7 @@ export const ProjectContainer = styled.div`
     width: 100%;
     
     p {
-      color: ${({ theme }) => theme.gray700};
+      color: ${({ theme }) => theme.gray300};
       font-size: 1.5rem;
       font-weight: 300;
       text-align: justify;

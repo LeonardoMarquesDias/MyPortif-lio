@@ -7,9 +7,9 @@ export default function Header() {
     window.open(url);
   }
 
-  return (
-    <div className="container">
-      <HederContent>
+  return (  
+    <HederContent>
+      <div className="container">
         <div>
           <h3>Portfolio</h3>
         </div>
@@ -27,7 +27,7 @@ export default function Header() {
               Leonardo Dias
           </button>
         </div>
-      </HederContent>
-    </div>
+      </div>
+    </HederContent>
   );
 }

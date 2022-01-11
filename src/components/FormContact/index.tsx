@@ -2,7 +2,7 @@ import SectionTitle from '../SectionTitle';
 import Form from './Form';
 import { Container } from './styles';
 
-function FormContact() {
+export default function FormContact() {
   return (
     <Container>
       <SectionTitle
@@ -21,6 +21,4 @@ function FormContact() {
       <Form />
     </Container>
   );
-};
-
-export default FormContact;
+}

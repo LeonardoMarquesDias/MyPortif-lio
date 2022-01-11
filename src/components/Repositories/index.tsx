@@ -4,33 +4,37 @@ import RepositoryItem from './RepositoryItem';
 
 import { Container } from './styles';
 
-function Repositories() {
+interface IProjeto {
+  slug: string;
+  title: string;
+  type: string;
+  description: string;
+  github: string;
+  thumbnail: string;
+}
+
+interface RepositoriesProps {
+  projects: IProjeto[];
+}
+
+function Repositories({ projects }: RepositoriesProps) {
   return (
     <Container>
-      <SectionTitle title="Main Pojects" />
-
+      <SectionTitle title="Last Pojects" />
       <section>
-        <RepositoryItem 
-          img=""
-          title="Project 01"
-          type="tecnology"
-          slug="test"
-        />
-        <RepositoryItem 
-          img=""
-          title="Project 01"
-          type="tecnology"
-          slug="test"
-        />
-        <RepositoryItem 
-          img=""
-          title="Project 01"
-          type="tecnology"
-          slug="test"
-        />
+        {projects.slice(0, 3).map(project => (
+          <RepositoryItem 
+            key={project.slug}
+            img={project.thumbnail}
+            title={project.title}
+            type={project.type}
+            slug={project.slug}
+            github={project.github}
+          />
+        ))}
       </section>
       <button>
-        <Link href="/repositories">
+        <Link href="/globalProjects">
           <a>Global Projects</a>
         </Link>
       </button>

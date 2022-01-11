@@ -5,17 +5,19 @@ interface NavLinkProps {
 }
 
 export const HederContent = styled.header`
+  width: 100%;  
   height: 5rem;
   border-bottom: 1px solid ${props => props.theme.border};
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
-  >div {
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     h3 {
       font-size: 2.5rem;
+      text-align: justify;
     }
   }
 
@@ -31,7 +33,7 @@ export const HederContent = styled.header`
 
   //GithubButton
   button {
-    height: 3rem;
+    height: 2.7rem;
     border-radius: 3rem;
     color: ${props => props.theme.text};
     border: none;

@@ -1,15 +1,18 @@
-import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
 import { RepositoryContainer } from './styles';
 
 interface ProjetoProps {
   title: string;
   type: string;
-  slug: string;
   img: string;
+  github: string;
 }
 
-export default function RepositoryItem({ title, type, slug, img }: ProjetoProps) {
+export default function RepositoryItem({ title, type, img, github }: ProjetoProps) {
+  function handleRedirect(url: string) {
+    window.open(url);
+  }
+  
   return (
     <RepositoryContainer imgUrl={img} data-aos="fade-up">
       <section>
@@ -20,11 +23,9 @@ export default function RepositoryItem({ title, type, slug, img }: ProjetoProps)
         </div>
       </section>
       <button type="button">
-        <Link href={`/projetos/${slug}`}>
-          <a href="">
-            See more <FaGithub color="#eba417" />
-          </a>
-        </Link>
+        <a onClick={() => handleRedirect(`${github}`)} >
+          See more <FaGithub color="#eba417" />
+        </a> 
       </button>
     </RepositoryContainer>
   )

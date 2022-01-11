@@ -21,17 +21,20 @@ function HomeHero() {
               Surname: <span className="blue">Dias,</span>
             </div>
             <div>
-              Location: <span className="blue">Liverpool UK</span>
+              Location: <span className="blue">United Kingdom</span>
             </div>
             {'\u007D'}
           </CodeItem>
           <CodeItem data-aos="zoom-in">
             <span className="purple">Job</span> {'\u007B'}
             <div>
-              Developer: <span className="blue">Front-end,</span>
+              Developer: <span className="blue">Front-End,</span>
             </div>
             <div>
-              Technology: <span className="blue">ReactJS</span>
+              Technology: <span className="blue">ReactJS,</span>
+            </div>
+            <div>
+              Learning: <span className="blue">NextJS</span>
             </div>
             {'\u007D'}
           </CodeItem>

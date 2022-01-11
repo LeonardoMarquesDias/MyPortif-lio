@@ -1,30 +1,52 @@
+import Prismic from '@prismicio/client';
+import { getPrismicClient } from '../../../services/prismic';
+import { GetStaticPaths, GetStaticProps } from 'next';
+
+import { useRouter } from 'next/router';
+
 import BannerProject from "../../../components/BannerProject";
 import Footer from "../../../components/Footer";
 import Header from "../../../components/Header";
 import { FaGithub } from 'react-icons/fa';
+import LoadingScreen from '../../../components/LoadingScreen';
 import { ProjectContainer } from '../../../styles/projectStyles';
 
-export default function Project() {
+interface IProject {
+  slug: string;
+  title: string;
+  type: string;
+  description: string;
+  github: string;
+  imgUrl: string;
+}
 
+interface ProjectsProps {
+  project: IProject;
+}
+
+export default function Project({ project }: ProjectsProps) {
   function handleRedirect(url: string) {
     window.open(url);
+  }
+
+  const router = useRouter();
+  if (router.isFallback) {
+    return <LoadingScreen />
   }
 
   return (
     <ProjectContainer>
       <Header />
       <BannerProject 
-        title="Project 01"
-        type="Website"
-        imgUrl=""
+        title={project.title}
+        type={project.type}
+        imgUrl={project.imgUrl}
       />
 
       <main>
         <div className="container">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic architecto accusamus adipisci perferendis sapiente incidunt nobis odit possimus autem dolor nam, ipsum velit quasi. Distinctio placeat suscipit consequuntur. Quos corrupti fugit cumque optio possimus reiciendis eligendi tenetur ab expedita explicabo impedit illum, similique necessitatibus cupiditate blanditiis id labore nostrum. Aspernatur recusandae sed corrupti minima et dolorem voluptate dolores maiores rerum quibusdam id veniam molestias dignissimos eligendi illo nam laudantium facere enim quo, perferendis esse harum. Soluta voluptas saepe molestiae, ad necessitatibus reprehenderit neque voluptates quos ab autem enim esse excepturi itaque quis, ex, laudantium voluptate alias inventore totam illum vel reiciendis et! Excepturi corrupti natus nulla quisquam ducimus. Repellendus totam laboriosam nam odit quae nulla tempore, accusamus ea veniam?
-          </p>
-          <button onClick={() => handleRedirect('https://github.com/LeonardoMarquesDias')}>
+          <p> {project.description} </p>
+          <button onClick={() => handleRedirect(`${github}`)}>
             <FaGithub color="#eba417" />
               SEE IN REPOSITORY
           </button>
@@ -35,3 +57,44 @@ export default function Project() {
     </ProjectContainer>
   )
 }
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const prismic = getPrismicClient();
+  const proj = await prismic.query([
+    Prismic.predicates.at('document.type', 'projects')
+  ]);
+
+  const paths = proj.results.map(project => ({
+    params: {
+      slug: project.uid
+    }
+  }))
+
+  return {
+    paths,
+    fallback: true
+  };
+};
+
+export const getStaticProps: GetStaticProps = async context => {
+  const prismic = getPrismicClient();
+  const { slug } = context.params;
+
+  const response = await prismic.getByUID<any>('projects', String(slug), {});
+
+  const project = {
+    slug: response.uid,
+    imgUrl: response.data.banner.url,
+    title: response.data.title,
+    type: response.data.type,
+    description: response.data.description,
+    github: response.data.github.url,
+  };
+
+  return {
+    props: {
+      project
+    },
+    revalidate: 86400
+  };
+};

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@prismicio/client": "5.1.1",
+    "@prismicio/types": "^0.1.21",
     "@types/styled-components": "^5.1.14",
     "add": "^2.0.6",
     "aos": "^2.3.4",

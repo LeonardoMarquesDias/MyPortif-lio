@@ -6,7 +6,7 @@ interface BannerProjectProps {
   imgUrl: string;
 }
 
-export default function BannerProject({ title, type, imgUrl }: BannerProjectProps) {
+export default function BannerProject({ title, type, imgUrl}: BannerProjectProps) {
   return (
     <Container imgUrl={imgUrl}>
       <div className="overlay">
