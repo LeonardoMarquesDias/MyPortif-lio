@@ -11,12 +11,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <ThemeProvider theme={theme}>
         <NextNprogress
-        color={theme.gold}
-        startPosition={0.3}
-        stopDelayMs={200}
-        height={3}
-        showOnShallow
-      />
+          color={theme.gold}
+          startPosition={0.3}
+          stopDelayMs={200}
+          height={3}
+          showOnShallow
+        />
         <Component {...pageProps} />
         <GlobalStyles />
       </ThemeProvider>
