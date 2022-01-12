@@ -15,7 +15,7 @@ export default function Form() {
     event.preventDefault();
 
     if (!name || !email || !message) {
-      toast('Fill in all fields to send your message!', {
+      toast('Please, Fill in all Required Fields ', {
         style: {
           background: theme.error,
           color: '#fff'
@@ -33,12 +33,12 @@ export default function Form() {
 
       toast('Message sent successfully!', {
         style: {
-          background: theme.gradient,
+          background: theme.green,
           color: '#fff'
         }
       });
     } catch (error) {
-      toast('An error occurred while trying to send your message. Try again!', {
+      toast('There was an error trying to send your message. Please try again!', {
         style: {
           background: theme.error,
           color: '#fff'
