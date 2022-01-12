@@ -4,20 +4,25 @@ interface NavLinkProps {
   isActive: boolean;
 }
 
-export const HederContent = styled.header`
-  width: 100%;  
+export const HederContent = styled.header` 
+  width: 100%; 
   height: 5rem;
   border-bottom: 1px solid ${props => props.theme.border};
-  margin: 0 auto;
 
-  > div {
+  .container-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
 
     h3 {
       font-size: 2.5rem;
       text-align: justify;
+      letter-spacing: 0.05rem;
     }
   }
 
@@ -37,7 +42,7 @@ export const HederContent = styled.header`
     border-radius: 3rem;
     color: ${props => props.theme.text};
     border: none;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,6 +68,10 @@ export const HederContent = styled.header`
       filter: brightness(0.8);
     }
   } 
+
+  @media (max-width: 700px) {
+    
+  }
 `;
 
 export const NavLinkContainer = styled.li<NavLinkProps>`
@@ -75,7 +84,11 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
     text-transform: uppercase;
     color: ${props =>
       props.isActive ? props.theme.gold : props.theme.gray700};
-    transition: 0.5s;  
+    transition: 0.5s; 
+    
+    :hover {
+      color: ${props => props.theme.text};
+    }
 
     &.isActive::after {
       content: '';

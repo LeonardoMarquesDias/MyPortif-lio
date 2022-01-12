@@ -2,7 +2,6 @@ import {
   AiOutlineTwitter,
   AiOutlineGithub,
   AiFillLinkedin,
-  AiFillYoutube,
 } from 'react-icons/ai';
 import { Container } from './styles';
 
@@ -20,14 +19,11 @@ function Footer() {
 
   return (
     <Container>
-      <div className="container">
+      <div className="container-content">
         <button type="button" onClick={handleScrollTop}>
           Top page.
         </button>
         <section>
-          <AiFillYoutube 
-            onClick={() => handleRedirect('https://www.youtube.com/channel/UC0llqWHlBivBSRMxTtuHLrg')}
-          />
           <AiOutlineTwitter
             onClick={() => handleRedirect('https://twitter.com/leonard57356040')}
           />

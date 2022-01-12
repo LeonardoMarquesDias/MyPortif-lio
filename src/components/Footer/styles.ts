@@ -9,10 +9,14 @@ export const Container = styled.footer`
   align-items: center;
   justify-content: center;
 
-  > div {
+  .container-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
 
     button {
       display: flex;
