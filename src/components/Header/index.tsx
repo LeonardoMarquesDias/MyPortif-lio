@@ -11,7 +11,7 @@ export default function Header() {
     <HederContent>
       <div className="container-content">
         <div>
-          <h3>Portfolio</h3>
+          <h3>Portflio</h3>
         </div>
 
         <div>
