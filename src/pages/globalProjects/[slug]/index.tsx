@@ -11,12 +11,14 @@ import Header from "../../../components/Header";
 import { FaGithub } from 'react-icons/fa';
 import LoadingScreen from '../../../components/LoadingScreen';
 import { ProjectContainer } from '../../../styles/projectStyles';
+import { Description } from './styles';
 
 interface IProject {
   slug: string;
   title: string;
   type: string;
   description: string;
+  description1: string;
   github: string;
   imgUrl: string;
   thumbnail: string;
@@ -49,19 +51,20 @@ export default function Project({ project }: ProjectsProps) {
       </Head>
       <Header />
       <BannerProject 
-        title={project.title}
-        type={project.type}
         imgUrl={project.imgUrl}
       />
 
-      <main>
-        <div className="container">
+      <main className="container">
+        <Description>
+          <h1> {project.title}</h1>
           <p> {project.description} </p>
-          <button onClick={() => handleRedirect(`${github}`)}>
+          <br/>
+          <p> {project.description1} </p>
+          <button onClick={() => handleRedirect(`${project.github}`)}>
             <FaGithub color="#eba417" />
               SEE IN REPOSITORY
           </button>
-        </div>
+        </Description>
       </main>
       
       <Footer />
@@ -99,6 +102,7 @@ export const getStaticProps: GetStaticProps = async context => {
     title: response.data.title,
     type: response.data.type,
     description: response.data.description,
+    description1: response.data.description1,
     github: response.data.github.url,
     thumbnail: response.data.thumbnail.url
   };
