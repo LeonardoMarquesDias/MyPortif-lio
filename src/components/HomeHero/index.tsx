@@ -1,11 +1,11 @@
-import Image from 'next/image'
 import { Container, TextContainer, InfosContainer, CodeItem } from './styles';
-import picture from '../../assets/pessoa.webp';
+import { Sidebar } from '../Sidebar';
 
 function HomeHero() {
   return (
     <Container data-aos="fade-up">
-      <Image src={picture} alt="Minha foto" />
+      
+      <Sidebar />
       <div>
         <TextContainer>
           <h1>Hello...</h1>
@@ -34,7 +34,10 @@ function HomeHero() {
               Technology: <span className="blue">ReactJS,</span>
             </div>
             <div>
-              Learning: <span className="blue">NextJS</span>
+              Learning: <span className="blue">NextJS,</span>
+            </div>
+            <div>
+              Design: <span className="blue">UI</span>
             </div>
             {'\u007D'}
           </CodeItem>

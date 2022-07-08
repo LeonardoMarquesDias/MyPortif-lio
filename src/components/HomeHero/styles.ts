@@ -3,24 +3,16 @@ import styled from 'styled-components';
 export const Container = styled.section`
   width: 100%;
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
   align-items: center;
   justify-content: center;
   margin-top: 4rem;
-
-  > img {
-    width: 40rem;
-    flex: 1;
-  }
 
   > div {
     flex: 4;
   }
 
   @media (max-width: 1450px) {
-    > img {
-      width: 30rem;
-    }
     > div {
       flex: 1;
     }
@@ -96,6 +88,12 @@ export const CodeItem = styled.pre`
 
   @media (max-width: 1450px) {
     width: 18rem;
+    padding: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 1300px) {
+    width: 25rem;
     padding: 1.5rem;
     font-size: 0.8rem;
   }
