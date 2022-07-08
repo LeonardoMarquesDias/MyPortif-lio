@@ -102,7 +102,7 @@ export const RepositoryContainer = styled.div<RepositoryProps>`
     background: url(${props => props.imgUrl}) no-repeat center;
     background-size: cover;
     position: relative;
-
+   
     > div.overlay {
       position: absolute;
       width: 100%;
