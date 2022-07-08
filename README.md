@@ -3,7 +3,7 @@
 ## 💻 Project Image
 
 <div align="center">
-   <img src="src/assets/portfolio.png" alt="Ig.news"/> 
+   <img src="src/assets/portfolioo.png" alt="Ig.news"/> 
    </br>
    <img src="src/assets/projects.png" alt="Ig.news Payment"/> 
 </div>
