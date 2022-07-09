@@ -41,7 +41,7 @@ export default function Project({ project }: ProjectsProps) {
   return (
     <ProjectContainer>
       <Head>
-        <title>{project.title}</title>
+        <title>{project.title} | Portfolio</title>
         <meta name="ReactJS Developer Portfolio" content={project.description} />
         <meta property="og:image" content={project.thumbnail} />
         <meta property="og:image:secure_url" content={project.thumbnail} />

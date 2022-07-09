@@ -39,7 +39,7 @@ export default function Home({ projects }: HomeProps) {
   return (
     <HomeContainer>
       <Head>
-        <title>Home</title>
+        <title>Home | Protfolio</title>
         <meta
           name="ReactJS Developer Portfolio"
           content="Falta por uma descrição melhor aqui"
