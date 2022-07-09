@@ -11,7 +11,7 @@ import Header from "../../../components/Header";
 import { FaGithub } from 'react-icons/fa';
 import LoadingScreen from '../../../components/LoadingScreen';
 import { ProjectContainer } from '../../../styles/projectStyles';
-import { Description } from './styles';
+import { Description } from '../../../styles/slugStyles';
 
 interface IProject {
   slug: string;
