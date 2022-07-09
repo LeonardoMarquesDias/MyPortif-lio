@@ -6,6 +6,7 @@ interface ExperienciaProps {
   title: string;
   description: string;
   certification: string;
+  url: string;
 }
 
 export default function ExperiencesItem({
@@ -13,16 +14,19 @@ export default function ExperiencesItem({
   year,
   title,
   description, 
-  certification
+  certification,
+  url
 }: ExperienciaProps) {
   return (
     <ItemContainer data-aos="fade-up">
       <div>
-        <h1>{school}</h1>
-        <p>{year}</p>
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <span>{certification}</span>
+        <a href={url} target="_blank">
+          <h1>{school}</h1>
+          <p>{year}</p>
+          <h2>{title}</h2>
+          <p>{description}</p>
+          <span>{certification}</span>
+        </a>
       </div>
     </ItemContainer>
   );
