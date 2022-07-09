@@ -28,7 +28,6 @@ function Repositories({ projects }: RepositoriesProps) {
             img={project.thumbnail}
             title={project.title}
             type={project.type}
-            slug={project.slug}
             github={project.github}
           />
         ))}
