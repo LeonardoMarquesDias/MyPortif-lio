@@ -12,15 +12,14 @@ function Experiences() {
           school="UI Start"
           year="2022"
           title="UI Design"
-          description="Basic theory and important concepts of UI Design and Figma to create interface for Mobile and Web devices"
-          certification=""
-          
+          description="Basic theory and important concepts of UI Design using Figma to create interface for Mobile and Web devices"
+          certification=""         
         />
         <ExperiencesItem
           school="Rocketseat"
           year="2021"
           title="Ignite"
-          description="Ignite is an acceleration program focusing on its expertise in ReactJS, building modern and reactive web interfaces using a modular and scalable library"
+          description="Ignite is an acceleration program focusing on ReactJS, building modern and reactive web interfaces using a modular and scalable library"
           certification=""
         />
         <ExperiencesItem
@@ -31,10 +30,10 @@ function Experiences() {
           certification=""
         />
         <ExperiencesItem
-          school="Video Course"
+          school="Rocketseat"
           year="2020"
           title="GitHub"
-          description="Git and Github for Version Control on Git Flow methodology"
+          description="Git, Github and Git Flow methodology"
           certification=""
         />
       </section>
