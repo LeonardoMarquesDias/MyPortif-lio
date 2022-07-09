@@ -25,7 +25,7 @@ export const Container = styled.section`
 
   > button {
     background: ${({ theme }) => theme.gold};
-    padding: 0.8rem 3rem;
+    padding: 0.6rem 1.7rem;
     border-radius: 0.5rem;
     font-weight: normal;
     border: none;

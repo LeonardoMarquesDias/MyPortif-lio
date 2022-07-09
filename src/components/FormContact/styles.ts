@@ -14,7 +14,7 @@ export const FormContainer = styled.form`
 
   > button {
     border: none;
-    padding: 0.7rem 2rem;
+    padding: 0.6rem 2rem;
     color: ${({ theme }) => theme.gray700};
     font-weight: 300;
     font-size: 1.1rem;
@@ -51,7 +51,7 @@ export const Input = styled.input`
   background: ${({ theme }) => theme.gray700};
   border: 1px solid ${({ theme }) => theme.gray700};
   padding: 1.7rem 1.5rem;
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.gold};
   border-radius: 0.5rem;
   font-size: 1.2rem;
   outline: none;
@@ -62,7 +62,7 @@ export const Input = styled.input`
   }
 
   &::placeholder {
-    color: ${({ theme }) => theme.border};
+    color: ${({ theme }) => theme.gray300};
   }
 
   @media (max-width: 450px) {
@@ -77,7 +77,7 @@ export const TextArea = styled.textarea`
   background: ${({ theme }) => theme.gray700};
   border: 1px solid ${({ theme }) => theme.border};
   padding: 1.7rem 1.5rem;
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.gold};
   border-radius: 0.5rem;
   font-size: 1.2rem;
   outline: none;
@@ -90,7 +90,7 @@ export const TextArea = styled.textarea`
   }
 
   &::placeholder {
-    color: ${({ theme }) => theme.border};
+    color: ${({ theme }) => theme.gray300};
   }
 
   @media (max-width: 700px) {

@@ -45,7 +45,7 @@ export const Container = styled.aside`
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 50px;
+    height: 3.1rem;
     background: ${props => props.theme.gold};
 
     button:hover {
