@@ -1,5 +1,5 @@
 ## 🚀 About the Project
-
+This is my Personal Portfolio when I have been building projects over the past 2 years to illustrate my abilities using various technologies including CSS, HTML, Javascript, React, NextJS among others.
 ## 💻 Project Image
 
 <div align="center">
