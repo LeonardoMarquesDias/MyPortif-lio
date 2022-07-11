@@ -13,7 +13,7 @@ export const Container = styled.aside`
     object-fit: cover;
   }
 
-  > div {
+  .avatar {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,6 +24,7 @@ export const Container = styled.aside`
       width: 12rem;
       height: 12rem;
       border-radius: 50%;
+      -webkit-border-radius: 50%;
       border: 6px solid ${props => props.theme.background}; 
       outline: 4px solid ${props => props.theme.gold};
     }
