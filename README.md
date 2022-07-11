@@ -27,13 +27,8 @@ $ yarn install
 or
 $ npm install
 
-# Run the following command to start the fake API with JSON Server to simulate an API that has foods information:
-$ yarn server
-or
-$ npm server
-
 # Run the following command to start the application in a development environment:
-$ yarn start
+$ next build
 or
 $ npm start
 
