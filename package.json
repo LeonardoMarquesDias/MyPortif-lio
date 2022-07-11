@@ -17,6 +17,7 @@
     "axios": "^0.24.0",
     "from": "^0.1.7",
     "googleapis": "^92.0.0",
+    "i": "^0.3.7",
     "import": "^0.0.6",
     "next": "11.1.2",
     "nextjs-progressbar": "^0.0.13",
