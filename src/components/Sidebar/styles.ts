@@ -30,6 +30,7 @@ export const Container = styled.aside`
       -webkit-border-radius: 50%;
       border: 6px solid ${props => props.theme.background}; 
       outline: 4px solid ${props => props.theme.gold};
+      -webkit-outline: 4px solid ${props => props.theme.gold}; 
     }
 
     strong {
