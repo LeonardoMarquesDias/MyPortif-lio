@@ -27,6 +27,7 @@ export const Container = styled.aside`
     .avatarBorder {
       border: 5px solid ${props => props.theme.gold}; 
       border-radius: 50%;
+      background: ${props => props.theme.background};
 
       img {
         width: 12rem;
