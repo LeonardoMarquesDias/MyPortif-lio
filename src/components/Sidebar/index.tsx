@@ -13,8 +13,9 @@ export function Sidebar() {
       />
 
       <div className="avatar">
-        <img src="https://github.com/LeonardoMarquesDias.png"/>
-        
+        <div className="avatarBorder">
+          <img src="https://github.com/LeonardoMarquesDias.png"/>
+        </div>
         <strong>Web Developer</strong>
         <span>UI Design</span>
       </div>

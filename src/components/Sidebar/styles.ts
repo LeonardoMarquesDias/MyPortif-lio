@@ -13,6 +13,10 @@ export const Container = styled.aside`
     object-fit: cover;
   }
 
+  .AvatarBorder {
+    border: 4px solid ${props => props.theme.gold};
+  }
+
   .avatar {
     display: flex;
     flex-direction: column;
@@ -20,12 +24,19 @@ export const Container = styled.aside`
     height: 20rem;
     margin-top: -6rem;
 
-    img {
-      width: 12rem;
-      height: 12rem;
+    .avatarBorder {
+      border: 5px solid ${props => props.theme.gold}; 
       border-radius: 50%;
-      border: 6px solid ${props => props.theme.background}; 
-      outline: 4px solid ${props => props.theme.gold};
+
+      img {
+        width: 12rem;
+        height: 12rem;
+        border-radius: 50%;
+        border: 4px solid ${props => props.theme.background}; 
+        margin-top: 2.5px;
+        margin-left: 2.5px;
+        margin-right: 2.5px;
+      }
     }
 
     strong {
